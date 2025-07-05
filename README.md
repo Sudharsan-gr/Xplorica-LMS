@@ -28,6 +28,3 @@ Xplorica is a full-featured **Learning Management System (LMS)** built as part o
 | HTML, CSS, JavaScript | Node.js, Express.js | MySQL |
 
 ---
-
-## 📂 Folder Structure
-
