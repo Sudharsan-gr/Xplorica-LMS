@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Xplorica | Sign Up</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-image: url(css/img2.jpeg);
+      background-repeat: no-repeat;
+      background-size: cover;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+
+    .container {
+  background: rgba(255, 255, 255, 0.2); /* semi-transparent */
+  backdrop-filter: blur(15px);         /* blur for glass effect */
+  -webkit-backdrop-filter: blur(15px); /* Safari support */
+  border-radius: 16px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  padding: 40px;
+  width: 90%;
+  max-width: 450px;
+  animation: fadeIn 0.8s ease;
+  color: #fff; /* White text for contrast */
+}
+
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(-20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    h2 {
+      text-align: center;
+      margin-bottom: 20px;
+      color: #333;
+    }
+
+    form {
+      display: flex;
+      flex-direction: column;
+    }
+
+    input,
+    select {
+      padding: 12px 15px;
+      margin-bottom: 15px;
+      border:0;
+      
+      font-size: 1rem;
+      
+    }
+    input,
+    select {
+      background:transparent;
+      color: #ffffff;
+      border-bottom: 2px solid gray;
+}
+
+select{
+  background-color:gray;
+}
+input::placeholder {
+  color: #ffffff;
+}
+
+
+    input:focus,
+    select:focus {
+      border-color: #000000;
+      outline: none;
+    }
+
+    label {
+      font-weight: 500;
+      margin-bottom: 5px;
+    }
+
+    button {
+      padding: 12px;
+      background-color: #6c63ff;
+      color: #fff;
+      border: none;
+      border-radius: 8px;
+      font-size: 1rem;
+      cursor: pointer;
+      transition: background-color 0.3s;
+    }
+
+    
+    button {
+  background: rgba(108, 99, 255, 0.8);
+  color: white;
+  border: none;
+}
+button:hover {
+  background: rgba(108, 99, 255, 1);
+}
+
+
+    p {
+      text-align: center;
+      margin-top: 15px;
+      font-size: 0.95rem;
+    }
+
+    a {
+      color: #1b0fff;
+      text-decoration: none;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+
+    @media (max-width: 500px) {
+      .container {
+        padding: 30px 20px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h2>Sign Up</h2>
+    <form id="signupForm">
+      <input type="text" id="name" placeholder="Name" required>
+      <input type="email" id="email" placeholder="Email" required>
+      <input type="password" id="password" placeholder="Password" required>
+
+      <label for="role" >Select Role:</label>
+      <select id="role" onchange="toggleAdminCode()">
+        <option value="student">Student</option>
+        <option value="instructor">Instructor</option>
+        <option value="admin">Admin</option>
+      </select>
+
+      <div id="adminCodeDiv" style="display:none;">
+        <input type="text" id="adminCode" placeholder="Enter Admin Code">
+      </div>
+
+      <button type="submit">Sign Up</button>
+    </form>
+
+    <p>Already have an account? <a href="index.html">Login here</a></p>
+  </div>
+
+  <script>
+    function toggleAdminCode() {
+      const role = document.getElementById('role').value;
+      document.getElementById('adminCodeDiv').style.display = role === 'admin' ? 'block' : 'none';
+    }
+  </script>
+  
+  <script src="js/auth.js"></script>
+</body>
+</html>

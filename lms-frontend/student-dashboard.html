@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Xplorica | Student Dashboard</title>
+  <!-- <link rel="stylesheet" href="css/styles.css"> -->
+   <style>
+
+    
+    body {
+  margin: 0%;
+  padding: 0%;
+  font-family: 'Segoe UI', sans-serif;
+  background-image: url(css/img2.jpeg);
+  min-height: 100vh;
+  color: #333;
+}
+
+h1, h2 {
+  text-align: center;
+  color: #fff;
+  text-shadow: 0 1px 2px rgba(0,0,0,0.2);
+}
+
+#coursesContainer {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+  padding-top: 30px;
+}
+
+.course-card {
+  background: rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(15px);
+  -webkit-backdrop-filter: blur(15px);
+  border-radius: 15px;
+  padding: 20px;
+  width: 280px;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+  color: #fff;
+  
+}
+
+.course-card h3 {
+  margin-bottom: 10px;
+  font-size: 1.3rem;
+}
+
+.course-card:hover {
+  transform: translateY(-5px);
+}
+
+.course-card button {
+  background: #6c63ff;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.3s;
+  font-size: 1rem;
+  justify-content: center;
+}
+
+.course-card button:hover {
+  background: #4e45d4;
+}
+
+
+#navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  
+  color: #fff;
+  padding: 20px 50px;
+  
+}
+
+.logo {
+  font-size: 2.8rem;
+  font-weight: bold;
+  letter-spacing: 1px;
+  font-family:cursive;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 30px;
+}
+
+.nav-links li a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 1.5rem;
+  transition: color 0.3s ease;
+}
+
+.nav-links li a:hover {
+  color: #d0a3f5;
+}
+
+button{
+  padding-left: 30px;
+}
+
+
+   </style>
+</head>
+<body>
+  <nav id="navbar">
+  <div class="logo">Xplorica 📘</div>
+  <ul class="nav-links">
+    <li><a href="student-dashboard.html">Home</a></li>
+    <li><a href="index.html" onclick="logout()">Logout</a></li>
+
+  </ul>
+</nav>
+
+  <h1>Welcome to Xplorica 🎓</h1>
+  <h2>Available Courses</h2>
+
+  <div id="coursesContainer"></div>
+
+
+
+  <script src="js/student.js"></script>
+  <script>
+    function logout() {
+    localStorage.removeItem('token');
+    localStorage.removeItem('selectedCourseId');
+  }
+  </script>
+</body>
+</html>

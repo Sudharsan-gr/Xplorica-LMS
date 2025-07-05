@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Xplorica | Assignment Evaluation</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      margin: 0;
+      padding: 0;
+      background-image: url('css/img2.jpeg');
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-attachment: fixed;
+      color: #fff;
+    }
+
+    #navbar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      
+      padding: 20px 50px;
+      
+    }
+
+    .logo {
+      font-size: 2.5rem;
+      font-weight: bold;
+      letter-spacing: 1px;
+      font-family: cursive;
+    }
+
+    .nav-links {
+      list-style: none;
+      display: flex;
+      gap: 30px;
+    }
+
+    .nav-links li a {
+      color: #fff;
+      text-decoration: none;
+      font-size: 1.2rem;
+      font-weight: 500;
+      transition: color 0.3s ease;
+    }
+
+    .nav-links li a:hover {
+      color: #d0a3f5;
+    }
+
+    h1 {
+      text-align: center;
+      font-weight: bolder;
+      font-size: 50px;
+      margin: 0px 0;
+      color: #000000;
+      text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+    }
+
+    #assignmentsContainer {
+      width: 90%;
+      
+      margin: 0 auto 50px auto;
+      display: flex;
+      
+
+    }
+
+    .assignment-block {
+      background: rgba(255, 255, 255, 0.1);
+      backdrop-filter: blur(8px);
+      padding: 25px;
+      margin: 20px;
+      border-radius: 15px;
+      box-shadow: 0 5px 20px rgba(0,0,0,0.2);
+      min-width: 300px;
+      flex-direction: row;
+      flex-wrap: wrap;
+
+    }
+
+    .assignment-block h3 {
+      color: #fff;
+      margin-bottom: 20px;
+    }
+
+    .submission-block {
+      background: #ffffffcc;
+      color: #000;
+      padding: 20px;
+      border-radius: 12px;
+      margin-bottom: 20px;
+      box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+    }
+
+    .submission-block p {
+      margin: 8px 0;
+    }
+
+    .submission-block label {
+      display: block;
+      font-weight: bold;
+      margin-top: 10px;
+    }
+
+    .submission-block input,
+    .submission-block textarea,
+    .submission-block select {
+      width: 90%;
+      padding: 10px;
+      margin-top: 5px;
+      margin-bottom: 10px;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      font-size: 1rem;
+    }
+
+    .submission-block button {
+      background-color: #6c63ff;
+      color: white;
+      border: none;
+      padding: 10px 15px;
+      border-radius: 6px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+
+    .submission-block button:hover {
+      background-color: #574ee8;
+    }
+
+    .evaluation-completed-msg {
+      color: rgb(255, 255, 255);
+      margin-top: 10px;
+    }
+  </style>
+</head>
+<body>
+
+  <nav id="navbar">
+    <div class="logo">Xplorica 📘</div>
+    <ul class="nav-links">
+      <li><a href="instructor-dashboard.html">Home</a></li>
+      
+      <li><a href="index.html">Logout</a></li>
+    </ul>
+  </nav>
+
+  <h1>Instructor Assignment Evaluation</h1>
+  <div id="assignmentsContainer">
+    <!-- Submissions will be loaded here -->
+  </div>
+
+  <script src="js/instructor-evaluate.js"></script>
+</body>
+</html>

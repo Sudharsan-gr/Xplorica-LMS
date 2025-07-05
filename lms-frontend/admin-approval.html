@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Xplorica | Admin Course Approval</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background-image: url(css/img2.jpeg);
+      color: #333;
+    }
+
+    h1 {
+      text-align: center;
+      padding: 30px 0;
+      font-size: 2.5rem;
+      color: #fff;
+      text-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    }
+
+    #coursesContainer {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 30px;
+      justify-content: center;
+      padding: 0 40px 60px;
+    }
+
+    .course-card {
+      background: rgba(255, 255, 255, 0.95);
+      padding: 25px 30px;
+      border-radius: 15px;
+      width: 320px;
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15);
+      transition: transform 0.2s ease;
+    }
+
+    .course-card:hover {
+      transform: translateY(-5px);
+    }
+
+    .course-card h3 {
+      margin-top: 0;
+      color: #4e45d4;
+    }
+
+    .course-card p {
+      font-size: 1rem;
+      margin-bottom: 20px;
+    }
+
+    .course-card button {
+      padding: 10px 16px;
+      margin-right: 10px;
+      border: none;
+      border-radius: 8px;
+      font-size: 1rem;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+
+    .course-card button:first-of-type {
+      background-color: #4caf50;
+      color: white;
+    }
+
+    .course-card button:first-of-type:hover {
+      background-color: #45a049;
+    }
+
+    .course-card button:last-of-type {
+      background-color: #f44336;
+      color: white;
+    }
+
+    .course-card button:last-of-type:hover {
+      background-color: #d32f2f;
+
+  
+    }
+    #navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  
+  color: #fff;
+  padding: 20px 50px;
+  
+}
+
+.logo {
+  font-size: 2.8rem;
+  font-weight: bold;
+  letter-spacing: 1px;
+  font-family:cursive;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 30px;
+}
+    #navbar {
+  position: sticky;
+  top: 0;
+  z-index: 999;
+}
+.nav-links li a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 1.5rem;
+  transition: color 0.3s ease;
+}
+
+.nav-links li a:hover {
+  color: #d0a3f5;
+}
+  </style>
+</head>
+<body>
+  <nav id="navbar">
+  <div class="logo">Xplorica 📘</div>
+  <ul class="nav-links">
+    
+    <li><a href="index.html" onclick="logout()">Logout</a></li>
+
+  </ul>
+</nav>
+  <h1>Pending Courses for Approval</h1>
+  <div id="coursesContainer"></div>
+
+  <script src="js/admin-approval.js"></script>
+</body>
+</html>
